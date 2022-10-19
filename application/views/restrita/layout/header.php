@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Antonio Daleo | Programador">
 
-    <title>Sistema de Login</title>
+
+    <?php echo (isset($titulo) ? '<title>Area restrita | '.$titulo.'</title>': '<title>Gerenciamento Site</title>' ) ?>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
@@ -19,7 +20,20 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url('assets/css/sb-admin-2.min.css') ?>" rel="stylesheet">
-    <script type="text/javascript" src="../assets/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url('assets/restrita/style.css') ?>">
+
+    <link rel="stylesheet" href="<?php echo base_url('assets/restrita/css/app.css' )?>">
+    
+    <?php if(isset($styles)): ?>
+        <?php foreach($styles as $style):?>
+            
+            <link rel="stylesheet" href="<?php echo base_url('assets/restrita/'.$style); ?>" rel="stylesheet" >
+            
+        <?php endforeach; ?>
+    <?php endif; ?>
+    
+    
+    <script type="text/javascript" src="../../assets/ckeditor/ckeditor.js"></script>
 </head>
 
 <body id="page-top">

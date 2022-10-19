@@ -1,12 +1,15 @@
-  <!-- Footer -->
-  <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+    <!-- Footer -->
+        <?php if(!$this->router->fetch_class()=='login'): ?>
+        
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Antonio Daleo | Web Developer <?php echo date('Y') ?> </span>
+            </div>
+          </div>
+        </footer>
+      
+        <?php endif;  ?>
 
         </div>
         <!-- End of Content Wrapper -->
@@ -48,7 +51,18 @@
 
     <!-- Custom scripts for all pages-->
     <script src="<?php echo base_url('assets/js/sb-admin-2.min.js') ?>"></script>
-        
+    
+    <script src="<?php echo base_url('assets/restrita/js/util.js'); ?>"></script>
+
+
+    <?php if(isset($scripts)): ?>
+
+        <?php foreach($scripts as $script):  ?>
+            <script src="<?php echo base_url('assets/restrita/'.$script) ;?>"> </script>
+        <?php endforeach; ?>
+
+    <?php endif; ?>
+
 </body>
 
 </html>
