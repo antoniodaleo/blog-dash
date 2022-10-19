@@ -61,12 +61,12 @@
                   <div class="form-group row">
                       <div class="col-md-3">
                           <label>Razão Social</label>
-                          <input type="text" class="form-control form-control-user" name="sistema_razao_social" placeholder="Razão Social" value="<?php echo $sistema->sistema_razao_social; ?>">
+                          <input type="text" class="form-control form-control-user" name="sistema_razao_social" placeholder="Razão Social" value="<?php echo (isset($sistema)? $sistema->sistema_razao_social : 'ID');  ?>">
                           <?php echo form_error('sistema_razao_social','<small class="form-text text-danger">','</small>',''); ?>  
                       </div>
                       <div class="col-md-3">
                           <label>Nome Fantasia</label>
-                          <input type="text" class="form-control form-control-user" name="sistema_nome_fantasia" placeholder="Nome Fantasia" value="<?php echo $sistema->sistema_nome_fantasia; ?>">
+                          <input type="text" class="form-control form-control-user" name="sistema_nome_fantasia" placeholder="Nome Fantasia" value="<?php echo  $sistema->sistema_nome_fantasia; ?>">
                           <?php echo form_error('sistema_nome_fantasia','<small class="form-text text-danger">','</small>',''); ?>  
                       </div>
                       <div class="col-md-3">

@@ -41,7 +41,10 @@
 
                 ),
 
-                'usuarios' => $this->ion_auth->users()->result()
+                'email' => $this->core_model->get_email('email'),
+                'email_view' => $this->core_model->get_novo_email_view(),
+                'novo_email' => $this->core_model->get_novo_email(), 
+                'usuarios' => $this->ion_auth->users()->result(),
                 
             );
 

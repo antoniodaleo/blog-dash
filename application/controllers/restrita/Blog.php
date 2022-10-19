@@ -7,8 +7,9 @@ class Blog extends CI_Controller {
 	public function index()
 	{
         $data = array(
-            'titulo' => 'Gerenciar Blog', 
-            
+
+            'titulo' => 'Gerenciar Blog',  
+
             'styles' => array(
 				'vendor/datatables/dataTables.bootstrap4.min.css',
 			),
@@ -22,6 +23,9 @@ class Blog extends CI_Controller {
             
             'blog' => $this->core_model->get_all_blog('blog'),
             'categorias' =>  $this->core_model->get_all('categorias', array('categoria_ativa' => 1)),
+            'email' => $this->core_model->get_email('email'),
+			'email_view' => $this->core_model->get_novo_email_view(),
+			'novo_email' => $this->core_model->get_novo_email(), 
         );
 
 		$this->load->view('restrita/layout/header', $data);

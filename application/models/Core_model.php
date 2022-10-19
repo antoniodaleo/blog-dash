@@ -134,6 +134,40 @@
            
         }
 
+        public function get_novo_email_view(){
+            $this->db->select([ 
+                'email_id',
+                'email_descricao', 
+                'email_data',
+                'email_nome', 
+                'email_mensagem',
+            ]); 
+    
+            //Email_status = 0 | Significa che la email nn é stata letta 
+            $this->db->where('email_status',0 ); 
+            
+    
+            return $this->db->get('email')->result(); 
+        }
+    
+    
+        public function get_novo_email(){
+    
+            
+            $this->db->select([ 
+                'count(email_id) as qtd_nova_email', 
+            ]); 
+    
+            //Email_status = 0 | Significa che la email nn é stata letta 
+            $this->db->where('email_status',0 ); 
+            
+    
+            return $this->db->get('email')->row(); 
+            
+    
+        }
+    
+
 
         //Mi prendi 4 post che stanno nel blog 
         public function get_all_blog_home($tabela = null){

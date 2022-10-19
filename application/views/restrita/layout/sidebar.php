@@ -6,7 +6,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
         <i class="fab fa-slideshare"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Twin Code</div>
+        <div class="sidebar-brand-text mx-3">Blog Easy</div>
       </a>
 
       <!-- Divider -->

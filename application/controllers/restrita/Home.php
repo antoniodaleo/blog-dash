@@ -24,8 +24,10 @@ class Home extends CI_Controller {
 
 		$data = array(
 			'titulo' => 'Home', 
-			//'servico' => $this->core_model->get_all('service'),
-			//'email' => $this->core_model->get_email('email'),
+			'email' => $this->core_model->get_email('email'),
+			'email_view' => $this->core_model->get_novo_email_view(),
+		
+			'novo_email' => $this->core_model->get_novo_email(), 
 		);
 
 		/*echo '<pre>'; 

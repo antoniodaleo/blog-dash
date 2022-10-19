@@ -29,7 +29,10 @@
                         'vendor/mask/jquery.mask.min.js',
                         'vendor/mask/app.js'
                 ),
-
+                
+                'email' => $this->core_model->get_email('email'),
+                'email_view' => $this->core_model->get_novo_email_view(),
+                'novo_email' => $this->core_model->get_novo_email(), 
                 'sistema' => $this->core_model->get_by_id('sistema', array('sistema_id'=>1)), 
             );
 

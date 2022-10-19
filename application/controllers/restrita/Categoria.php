@@ -37,7 +37,9 @@ class Categoria extends CI_Controller {
             ),
             
             'categorias' => $this->core_model->get_all('categorias'),
-
+            'email' => $this->core_model->get_email('email'),
+			'email_view' => $this->core_model->get_novo_email_view(),
+			'novo_email' => $this->core_model->get_novo_email(), 
         ); 
 
             $this->load->view('restrita/layout/header',  $data);

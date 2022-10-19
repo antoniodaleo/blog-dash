@@ -11,46 +11,38 @@
 <!-- Topbar Navbar -->
 <ul class="navbar-nav ml-auto">
 
-  <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-  <li class="nav-item dropdown no-arrow d-sm-none">
-    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <i class="fas fa-search fa-fw"></i>
-    </a>
-    <!-- Dropdown - Messages -->
-    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-      <form class="form-inline mr-auto w-100 navbar-search">
-        <div class="input-group">
-          <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="button">
-              <i class="fas fa-search fa-sm"></i>
-            </button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </li>
+  
 
-  <!-- Nav Item - Alerts -->
-  <?php if($this->ion_auth->is_admin()): ?> 
-    <?php if(isset($contador_notificacoes) && $contador_notificacoes >0): ?>
-      <li class="nav-item dropdown no-arrow mx-1">
-        <a class="nav-link dropdown-toggle blink_me" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-bell fa-fw"></i>
-          <!-- Counter - Alerts -->
-          <span class="badge badge-danger badge-counter"><?php echo $contador_notificacoes; ?></span>
-        </a>
-        <!-- Dropdown - Alerts -->
-        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
-          <h6 class="dropdown-header">
-            Central de Notificações
-          </h6>
+  <!-- Nav Item - Messages -->
+  <li class="nav-item dropdown no-arrow mx-1">
+      <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-envelope fa-fw"></i>
+        <!-- Counter - Messages -->
+        <span class="badge badge-danger badge-counter"><?php echo $novo_email->qtd_nova_email;   ?></span>
+      </a>
+      <!-- Dropdown - Messages -->
+      <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+        aria-labelledby="messagesDropdown">
+        <h6 class="dropdown-header">
+          Novas mensagens
+        </h6>
 
-         
-        </div>
-      </li>
-    <?php endif; ?>
-  <?php endif; ?>
+        <?php foreach($email_view as $email): ?> 
+          <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url('restrita/email/mensagem/'.$email->email_id); ?>">
+            <div class="font-weight-bold">
+              <div class="text-truncate"><?php echo $email->email_mensagem;  ?></div>
+              <div class="small text-gray-500"><?php echo $email->email_descricao;  ?> · <?php echo formata_data_banco_sem_hora($email->email_data) ;  ?></div>
+            </div>
+          </a>
+
+        <?php endforeach;  ?>
+        
+      </div>
+    </li>
+
+
+
 
   <div class="topbar-divider d-none d-sm-block"></div>
     
