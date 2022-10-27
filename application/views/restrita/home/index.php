@@ -124,7 +124,35 @@
     */ ?>
     <!-- 2º Content -->
     <div class="row">
-      Home
+      <div class="col-md-6">
+        <div class="card">
+          <h5 class="card-header">Bem vindo no Blog Easy</h5>
+          <div class="card-body">
+            <a href="<?php echo base_url('restrita/blog/core') ?>" > <i class="fa fa-edit"></i> </a> Escreva um post
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <h5 class="card-header">Conteudo</h5>
+          <div class="card-body">
+          
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <i class="fas fa-folder-open" aria-hidden="true"></i> <a href="<?php echo base_url('restrita/categoria') ?>">Categorias</a> 
+              <span class="badge badge-primary badge-pill"><?php echo $categorias_tot;  ?></span>
+            </li>
+          
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <i class="fas fa-edit" aria-hidden="true"></i> Post
+              <span class="badge badge-primary badge-pill"><?php echo $post_tot;  ?></span>
+            </li>
+           
+          </ul>
+        
+          </div>
+        </div>
+      </div>
 
     </div>
 

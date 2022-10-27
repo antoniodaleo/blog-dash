@@ -126,6 +126,9 @@ class Blog extends CI_Controller {
                     ),
                     'categorias' =>  $this->core_model->get_all('categorias', array('categoria_ativa' => 1)),
                     //'blog' => $this->core_model->get_all('blog'),
+                    'email' => $this->core_model->get_email('email'),
+                    'email_view' => $this->core_model->get_novo_email_view(),
+                    'novo_email' => $this->core_model->get_novo_email(), 
         
                 );
         
@@ -224,6 +227,9 @@ class Blog extends CI_Controller {
                         'categorias' =>  $this->core_model->get_all('categorias', array('categoria_ativa' => 1)),
                         'blog' => $blog,
                         'fotos_produto' => $this->core_model->get_all('produtos_fotos', array('foto_produto_id' => $blog_id)),
+                        'email' => $this->core_model->get_email('email'),
+                        'email_view' => $this->core_model->get_novo_email_view(),
+                        'novo_email' => $this->core_model->get_novo_email(), 
                         //'marcas' =>  $this->core_model->get_all('marcas', array('marca_ativa' => 1)),
     
                     ); 

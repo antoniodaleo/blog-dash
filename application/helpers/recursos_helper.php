@@ -72,7 +72,7 @@ function formata_data_banco_sem_hora($string) {
     $hora = date('H:i', strtotime($string));
 
     //return $dia . '/' . $mes_num . '/' . $ano;
-    return $dia . ' / ' . $mes_num .'<br>'. $ano;
+    return $dia . '/' . $mes_num .'/'. $ano;
 }
 
 

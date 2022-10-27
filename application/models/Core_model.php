@@ -5,6 +5,7 @@
     class Core_model extends CI_Model{
         
         var $table = "blog";
+        var $tableCat = "categorias"; 
 
         // Mi porti tutti i registri
         public function get_all($tabela = NULL, $condicao = NULL){
@@ -391,7 +392,14 @@
             return $this->db->count_all($this->table);
         }
 
+        public function CountAllCategorias(){
 
+            return $this->db->count_all($this->tableCat);
+        }
+
+
+
+       
 
 
     }

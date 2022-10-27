@@ -1,10 +1,9 @@
 
-
 $(document).ready(function ()
 {
     $("#fileuploader").uploadFile({
         url: BASE_URL + "restrita/blog/upload",
-        fileName: "fotos_produtos",
+        fileName: "foto_produto",
         returnType: "json",
         onSuccess: function (files, data) {
 

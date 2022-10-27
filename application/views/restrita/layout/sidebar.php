@@ -42,6 +42,19 @@
         </div>
       </li>
 
+       <!-- FINANCEIRO -->
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="fas fa-file-invoice-dollar"></i>
+          <span>FINANCEIRO</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="collapseTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Escolha uma opção:</h6>     
+            <a title="Gerenciar Contas a pagar" class="collapse-item" href="<?php echo base_url('restrita/pagar'); ?>"><i class="fas fa-money-bill-alt"></i>&nbsp; Pagar</a>          
+          </div>
+        </div>
+      </li>
      
       <hr class="sidebar-divider">
       <!-- Nav Item - Pages Collapse Menu CONFIGURAÇÕES -->
@@ -56,6 +69,7 @@
             <i class="fas fa-envelope-open-text"></i>
             <span>Email</span></a>
           </li>
+       
           <!-- Nav Item - Usuarios -->
           <li class="nav-item">
             <a class="nav-link" href="<?php echo base_url('restrita/usuarios')?>">

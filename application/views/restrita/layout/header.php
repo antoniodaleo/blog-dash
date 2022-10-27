@@ -33,7 +33,7 @@
     <?php endif; ?>
     
     
-    <script type="text/javascript" src="../../assets/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="../../../assets/ckeditor/ckeditor.js"></script>
 </head>
 
 <body id="page-top">

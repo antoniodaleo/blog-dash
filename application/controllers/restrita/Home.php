@@ -26,8 +26,12 @@ class Home extends CI_Controller {
 			'titulo' => 'Home', 
 			'email' => $this->core_model->get_email('email'),
 			'email_view' => $this->core_model->get_novo_email_view(),
-		
 			'novo_email' => $this->core_model->get_novo_email(), 
+
+			'post_tot' => $this->core_model->CountAll(), 
+			'categorias_tot' => $this->core_model->CountAllCategorias(), 
+	
+			
 		);
 
 		/*echo '<pre>'; 
